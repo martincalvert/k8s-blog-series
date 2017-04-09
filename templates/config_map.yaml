@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Chart.Name }}-html
+  labels:
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
+    app: {{ .Chart.Name }}
+data:
+  index.html: |-
+    <html>
+      <body>
+        <h1>K8s Is Awsemo</h1>
+      </body>
+    </html>
